@@ -29,10 +29,10 @@
                     Console.Write("\nInvalid input!\n");
                     Main(args);
                     _ = Console.ReadLine();
-
                 }
                 guess = Console.ReadLine();
             }
+
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nYou win!\n");
 
