@@ -14,7 +14,7 @@
             Console.Write(promptText);
             string guess = Console.ReadLine();
 
-            string[] acceptedInput = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+            string[] acceptedInput = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "r", "R"};
 
             while (guess != randInt)
             {
@@ -28,7 +28,6 @@
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write("\nInvalid input!\n");
                     Main(args);
-                    _ = Console.ReadLine();
                 }
                 guess = Console.ReadLine();
             }
@@ -40,10 +39,14 @@
 
             string replay = Console.ReadLine();
 
-            if (replay == "r" || replay == "R")
+            if (replay.ToLower() == "r")
             {
                 Console.WriteLine();
                 Main(args);
+            }
+            else
+            {
+                Environment.Exit(0);
             }
         }
     }
